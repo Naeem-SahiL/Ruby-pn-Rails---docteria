@@ -1,0 +1,42 @@
+<%= form_with(model: available_slot, local: true) do |form| %>
+  <% if available_slot.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(available_slot.errors.count, "error") %> prohibited this available_slot from being saved:</h2>
+
+      <ul>
+      <% available_slot.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :date_from %>
+    <%= form.date_select :date_from %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_to %>
+    <%= form.date_select :date_to %>
+  </div>
+
+  <div class="field">
+    <%= form.label :time_from %>
+    <%= form.time_select :time_from %>
+  </div>
+
+  <div class="field">
+    <%= form.label :time_to %>
+    <%= form.time_select :time_to %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fees %>
+    <%= form.text_field :fees %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

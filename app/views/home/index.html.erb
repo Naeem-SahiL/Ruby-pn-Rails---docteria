@@ -1,0 +1,17 @@
+<% if current_user %>
+
+  <% if current_user.role.role == "admin" %>
+    <%= render 'shared/roles_pages/admin' %>
+
+  <% elsif current_user.role.role == "doctor" %>
+
+    <%= render 'shared/roles_pages/doctor' %>
+
+    <% else current_user.role.role == "patient" %>
+      <%= render 'shared/roles_pages/patient' %>
+
+    <% end %>
+  <% else %>
+    <%= render 'shared/roles_pages/shared' %>
+
+  <% end %>

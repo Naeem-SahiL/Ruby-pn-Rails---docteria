@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date from:</strong>
+  <%= @available_slot.date_from %>
+</p>
+
+<p>
+  <strong>Date to:</strong>
+  <%= @available_slot.date_to %>
+</p>
+
+<p>
+  <strong>Time from:</strong>
+  <%= @available_slot.time_from %>
+</p>
+
+<p>
+  <strong>Time to:</strong>
+  <%= @available_slot.time_to %>
+</p>
+
+<p>
+  <strong>Fees:</strong>
+  <%= @available_slot.fees %>
+</p>
+
+<%= link_to 'Edit', edit_available_slot_path(@available_slot) %> |
+<%= link_to 'Back', available_slots_path %>
